@@ -1,6 +1,6 @@
 namespace Cats
 
-class Category (O : Type o) (F : O -> O -> Type f) where
+structure Category (O : Type o) (F : O -> O -> Type f) where
   comp : (f : F a b) -> (g : F b c) -> F a c
   id : (a : O) -> F a a
   assoc : ∀ {f : F a b} {g : F b c} {h : F c d},

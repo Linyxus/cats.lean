@@ -1,10 +1,9 @@
 import Cats.Core
+import Cats.Common
 namespace Cats.Categories.Basic
 
 namespace One
 
-inductive Unit : Type where
-| unit : Unit
 open Unit
 
 inductive Arr : Unit -> Unit -> Type where

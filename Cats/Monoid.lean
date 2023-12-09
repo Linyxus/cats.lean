@@ -1,4 +1,6 @@
 import Cats.Core
+import Cats.Common
+
 namespace Cats
 namespace Monoid
 
@@ -10,9 +12,6 @@ structure Monoid (A : Type u) where
   rightId : ∀ {x}, append x empty = x
 
 namespace MonoidAsCat
-
-inductive Unit : Type where
-| unit : Unit
 
 instance (m : Monoid A) : Category Unit (fun _ _ => A) where
   comp f g := m.append f g
